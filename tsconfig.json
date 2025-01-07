@@ -1,0 +1,32 @@
+{
+   "include": ["src/**/*"],
+   "compilerOptions": {
+      "lib": ["ESNext", "DOM"],
+      "target": "ESNext",
+      "module": "ESNext",
+      "jsx": "react-jsx",
+      "moduleDetection": "force",
+      "moduleResolution": "bundler",
+      "paths": {
+         "@types": ["./types/internal.d.ts"],
+         "@src/*": ["./src/*"]
+      },
+      "allowJs": true,
+      "allowImportingTsExtensions": false,
+      "allowSyntheticDefaultImports": true,
+      "composite": false,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitAny": true,
+      "noImplicitReturns": true,
+      "noPropertyAccessFromIndexSignature": false,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "sourceMap": false,
+      "strict": true,
+      "verbatimModuleSyntax": false
+   }
+}
