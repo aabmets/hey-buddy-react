@@ -1,5 +1,5 @@
 {
-   "include": ["src/**/*"],
+   "include": ["src/**/*", "tests/**/*"],
    "compilerOptions": {
       "lib": ["ESNext", "DOM"],
       "target": "ESNext",
@@ -7,6 +7,7 @@
       "jsx": "react-jsx",
       "moduleDetection": "force",
       "moduleResolution": "bundler",
+      "types": ["vitest", "vite/client"],
       "paths": {
          "@types": ["./types/internal.d.ts"],
          "@src/*": ["./src/*"]

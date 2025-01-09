@@ -29,3 +29,8 @@ coverage
 
 # Editor-based Rest Client
 .idea/httpRequests
+
+
+# Playwright specific excludes
+playwright-report
+test-results
