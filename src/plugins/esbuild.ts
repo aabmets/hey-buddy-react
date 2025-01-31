@@ -9,9 +9,11 @@
  *   SPDX-License-Identifier: Apache-2.0
  */
 
+import type * as t from "@types";
 import type { Plugin as EsbuildPlugin, PluginBuild } from "esbuild";
 
-export function VADPlugin(): EsbuildPlugin {
+export function VADPlugin(config: Partial<t.VADPluginConfig> = {}): EsbuildPlugin {
+   console.debug(config);
    return {
       name: "VADPlugin",
       setup: (build: PluginBuild) => {

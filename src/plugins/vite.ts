@@ -9,10 +9,12 @@
  *   SPDX-License-Identifier: Apache-2.0
  */
 
+import type * as t from "@types";
 import type { NormalizedInputOptions } from "rollup";
 import type { Plugin as VitePlugin } from "vite";
 
-export function VADPlugin(): VitePlugin {
+export function VADPlugin(config: Partial<t.VADPluginConfig> = {}): VitePlugin {
+   console.debug(config);
    return {
       name: "VADPlugin",
       buildStart: (options: NormalizedInputOptions) => {

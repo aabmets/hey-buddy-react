@@ -9,9 +9,11 @@
  *   SPDX-License-Identifier: Apache-2.0
  */
 
+import type * as t from "@types";
 import type { NormalizedInputOptions, Plugin as RollupPlugin } from "rollup";
 
-export function VADPlugin(): RollupPlugin {
+export function VADPlugin(config: Partial<t.VADPluginConfig> = {}): RollupPlugin {
+   console.debug(config);
    return {
       name: "VADPlugin",
       buildStart: (options: NormalizedInputOptions) => {
