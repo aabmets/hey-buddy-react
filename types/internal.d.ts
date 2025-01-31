@@ -8,3 +8,23 @@
  *
  *   SPDX-License-Identifier: Apache-2.0
  */
+
+import { JSX } from "react";
+
+export interface ProviderProps {
+   children: JSX.Element | JSX.Element[];
+   autoStart?: boolean;
+   autoPause?: boolean;
+}
+
+export interface WakeWordControls {
+   startListening: () => void;
+   pauseListening: () => void;
+   listening: boolean;
+   loading: boolean;
+   error: string | null;
+}
+
+export interface VADPluginConfig {
+   [key: string]: string | number;
+}
