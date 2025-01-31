@@ -38,4 +38,26 @@ export function searchUpwards(forPath: string, startFrom = import.meta.url): str
    return null;
 }
 
-export default { searchUpwards };
+/**
+ * Concatenates multiple Float32Array objects into a single Float32Array.
+ *
+ * @param arrays - The arrays to be concatenated.
+ * @returns A new Float32Array containing the concatenated data.
+ */
+export function concatArrays(arrays: Float32Array[]): Float32Array {
+   const sizes = arrays.reduce(
+      (out, next) => {
+         out.push((out.at(-1) as number) + next.length);
+         return out;
+      },
+      [0],
+   );
+   const outArray = new Float32Array(sizes.at(-1) as number);
+   arrays.forEach((arr, index) => {
+      const place = sizes[index];
+      outArray.set(arr, place);
+   });
+   return outArray;
+}
+
+export default { searchUpwards, concatArrays };
