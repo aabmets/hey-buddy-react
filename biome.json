@@ -45,11 +45,12 @@
             "noUnusedPrivateClassMembers": "warn",
             "noUnusedVariables": "warn",
             "useArrayLiterals": "error",
+            "useExhaustiveDependencies": "off",
             "useHookAtTopLevel": "error",
             "useImportExtensions": "off"
          },
          "performance": {
-            "noBarrelFile": "error",
+            "noBarrelFile": "off",
             "noReExportAll": "error"
          },
          "style": {
