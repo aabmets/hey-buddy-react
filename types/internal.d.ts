@@ -11,6 +11,14 @@
 
 import { JSX } from "react";
 
+export {
+   SpeechProbabilities,
+   FrameProcessorOptions,
+   FrameProcessorEvent,
+   FrameProcessorInterface,
+   ModelProcessor,
+} from "./frame_processor";
+
 export interface ProviderProps {
    children: JSX.Element | JSX.Element[];
    autoStart?: boolean;
