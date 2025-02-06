@@ -1,4 +1,3 @@
-import type * as t from "@types";
 /*
  *   Apache License 2.0
  *
@@ -9,6 +8,8 @@ import type * as t from "@types";
  *
  *   SPDX-License-Identifier: Apache-2.0
  */
+
+import type * as t from "@types";
 import * as c from "./constants";
 
 export function validateOptions(options: t.FrameProcessorOptions) {
