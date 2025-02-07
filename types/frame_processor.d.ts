@@ -10,7 +10,6 @@
  */
 
 import type * as c from "@src/vad/constants";
-import type * as t from "./internal";
 
 export interface FrameProcessorOptions {
    /**
@@ -95,4 +94,4 @@ export interface SpeechProbabilities {
    isSpeech: number;
 }
 
-export type ModelProcessor = (frame: Float32Array) => Promise<t.SpeechProbabilities>;
+export type ModelProcessor = (frame: Float32Array) => Promise<SpeechProbabilities>;

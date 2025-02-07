@@ -9,8 +9,6 @@
  *   SPDX-License-Identifier: Apache-2.0
  */
 
-export type * from "./frame_processor";
-export type * from "./real_time_vad";
-export type * from "./resampler";
-export type * from "./context";
-export type * from "./plugin";
+export interface VADPluginConfig {
+   [key: string]: string | number;
+}
