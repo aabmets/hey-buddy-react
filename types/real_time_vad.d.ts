@@ -21,7 +21,7 @@ export type OrtOptions = { ortConfig?: OrtConfigurer };
 export type ModelFetcher = () => Promise<ArrayBuffer>;
 
 export interface Model {
-   reset_state: () => void;
+   resetState: () => void;
    process: (arr: Float32Array) => Promise<fpt.SpeechProbabilities>;
 }
 

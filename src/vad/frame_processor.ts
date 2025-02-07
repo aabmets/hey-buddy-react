@@ -15,7 +15,7 @@ import * as c from "./constants";
 
 export class FrameProcessor implements t.FrameProcessorInterface {
    public modelProcessFunc: t.ModelProcessor;
-   public modelResetFunc: () => null;
+   public modelResetFunc: () => void;
    public options: t.FrameProcessorOptions;
    public audioBuffer: { frame: Float32Array; isSpeech: boolean }[];
 
@@ -27,7 +27,7 @@ export class FrameProcessor implements t.FrameProcessorInterface {
 
    constructor(
       modelProcessFunc: t.ModelProcessor,
-      modelResetFunc: () => null,
+      modelResetFunc: () => void,
       options: t.FrameProcessorOptions,
    ) {
       this.modelProcessFunc = modelProcessFunc;

@@ -45,7 +45,7 @@ export class SileroModel {
       return new SileroModel(session, state, sr, ortInstance);
    }
 
-   reset_state() {
+   resetState() {
       this.state = SileroModel.getNewState(this.ortInstance);
    }
 
