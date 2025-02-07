@@ -11,6 +11,5 @@
 
 export type * from "./frame_processor";
 export type * from "./real_time_vad";
-export type * from "./resampler";
 export type * from "./context";
 export type * from "./plugin";

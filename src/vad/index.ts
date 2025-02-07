@@ -8,9 +8,3 @@
  *
  *   SPDX-License-Identifier: Apache-2.0
  */
-
-export interface ResamplerOptions {
-   nativeSampleRate: number;
-   targetSampleRate: number;
-   targetFrameSize: number;
-}
