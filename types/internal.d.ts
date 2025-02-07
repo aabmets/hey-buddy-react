@@ -9,9 +9,7 @@
  *   SPDX-License-Identifier: Apache-2.0
  */
 
-import { JSX } from "react";
-
-export {
+export type {
    SpeechProbabilities,
    FrameProcessorOptions,
    FrameProcessorEvent,
@@ -19,19 +17,9 @@ export {
    ModelProcessor,
 } from "./frame_processor";
 
-export interface ProviderProps {
-   children: JSX.Element | JSX.Element[];
-   autoStart?: boolean;
-   autoPause?: boolean;
-}
+export type { ResamplerOptions } from "./resampler";
 
-export interface WakeWordControls {
-   startListening: () => void;
-   pauseListening: () => void;
-   listening: boolean;
-   loading: boolean;
-   error: string | null;
-}
+export type { ProviderProps, WakeWordControls } from "./context";
 
 export interface VADPluginConfig {
    [key: string]: string | number;
