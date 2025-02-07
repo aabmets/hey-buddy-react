@@ -60,4 +60,8 @@ export function concatArrays(arrays: Float32Array[]): Float32Array {
    return outArray;
 }
 
-export default { searchUpwards, concatArrays };
+export async function modelFetcher(path: string): Promise<ArrayBuffer> {
+   return fetch(path).then((model) => model.arrayBuffer());
+}
+
+export default { searchUpwards, concatArrays, modelFetcher };
