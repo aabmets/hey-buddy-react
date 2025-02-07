@@ -20,8 +20,6 @@ export type OrtOptions = { ortConfig?: OrtConfigurer };
 
 export type ModelFetcher = () => Promise<ArrayBuffer>;
 
-export type ModelFactory = (ortInstance: OrtModule, modelFetcher: ModelFetcher) => Promise<Model>;
-
 export interface Model {
    reset_state: () => void;
    process: (arr: Float32Array) => Promise<fpt.SpeechProbabilities>;
